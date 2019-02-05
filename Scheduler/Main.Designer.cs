@@ -31,6 +31,13 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
 			this.lblTitle = new System.Windows.Forms.Label();
 			this.groupTODO = new System.Windows.Forms.GroupBox();
+			this.listBox1 = new System.Windows.Forms.ListBox();
+			this.radioButton1 = new System.Windows.Forms.RadioButton();
+			this.radioButton2 = new System.Windows.Forms.RadioButton();
+			this.radioButton3 = new System.Windows.Forms.RadioButton();
+			this.btnProjects = new System.Windows.Forms.Button();
+			this.button1 = new System.Windows.Forms.Button();
+			this.groupTODO.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// lblTitle
@@ -47,23 +54,98 @@
 			// groupTODO
 			// 
 			this.groupTODO.BackColor = System.Drawing.Color.Transparent;
+			this.groupTODO.Controls.Add(this.listBox1);
 			this.groupTODO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.groupTODO.Font = new System.Drawing.Font("Bahnschrift Condensed", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.groupTODO.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(85)))));
 			this.groupTODO.Location = new System.Drawing.Point(17, 57);
 			this.groupTODO.Name = "groupTODO";
-			this.groupTODO.Size = new System.Drawing.Size(269, 375);
+			this.groupTODO.Size = new System.Drawing.Size(269, 208);
 			this.groupTODO.TabIndex = 1;
 			this.groupTODO.TabStop = false;
 			this.groupTODO.Text = "TODO";
 			this.groupTODO.Paint += new System.Windows.Forms.PaintEventHandler(this.groupTODO_Paint);
+			// 
+			// listBox1
+			// 
+			this.listBox1.BackColor = System.Drawing.Color.Black;
+			this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.listBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(85)))));
+			this.listBox1.FormattingEnabled = true;
+			this.listBox1.ItemHeight = 16;
+			this.listBox1.Location = new System.Drawing.Point(3, 20);
+			this.listBox1.Name = "listBox1";
+			this.listBox1.Size = new System.Drawing.Size(263, 185);
+			this.listBox1.TabIndex = 0;
+			// 
+			// radioButton1
+			// 
+			this.radioButton1.AutoSize = true;
+			this.radioButton1.Location = new System.Drawing.Point(622, 202);
+			this.radioButton1.Name = "radioButton1";
+			this.radioButton1.Size = new System.Drawing.Size(58, 17);
+			this.radioButton1.TabIndex = 2;
+			this.radioButton1.Text = "Red Mode";
+			this.radioButton1.UseVisualStyleBackColor = true;
+			// 
+			// radioButton2
+			// 
+			this.radioButton2.AutoSize = true;
+			this.radioButton2.Location = new System.Drawing.Point(611, 225);
+			this.radioButton2.Name = "radioButton2";
+			this.radioButton2.Size = new System.Drawing.Size(69, 17);
+			this.radioButton2.TabIndex = 3;
+			this.radioButton2.Text = "Yellow Mode";
+			this.radioButton2.UseVisualStyleBackColor = true;
+			// 
+			// radioButton3
+			// 
+			this.radioButton3.AutoSize = true;
+			this.radioButton3.Checked = true;
+			this.radioButton3.Location = new System.Drawing.Point(614, 248);
+			this.radioButton3.Name = "radioButton3";
+			this.radioButton3.Size = new System.Drawing.Size(66, 17);
+			this.radioButton3.TabIndex = 4;
+			this.radioButton3.TabStop = true;
+			this.radioButton3.Text = "Green Mode";
+			this.radioButton3.UseVisualStyleBackColor = true;
+			// 
+			// btnProjects
+			// 
+			this.btnProjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnProjects.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnProjects.Location = new System.Drawing.Point(562, 12);
+			this.btnProjects.Name = "btnProjects";
+			this.btnProjects.Size = new System.Drawing.Size(118, 32);
+			this.btnProjects.TabIndex = 5;
+			this.btnProjects.Text = "Manage Projects...";
+			this.btnProjects.UseVisualStyleBackColor = true;
+			this.btnProjects.Click += new System.EventHandler(this.btnProjects_Click);
+			// 
+			// button1
+			// 
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button1.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button1.Location = new System.Drawing.Point(485, 12);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(71, 32);
+			this.button1.TabIndex = 6;
+			this.button1.Text = "Settings...";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// Main
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(4F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Black;
-			this.ClientSize = new System.Drawing.Size(692, 444);
+			this.ClientSize = new System.Drawing.Size(692, 276);
+			this.Controls.Add(this.button1);
+			this.Controls.Add(this.btnProjects);
+			this.Controls.Add(this.radioButton3);
+			this.Controls.Add(this.radioButton2);
+			this.Controls.Add(this.radioButton1);
 			this.Controls.Add(this.groupTODO);
 			this.Controls.Add(this.lblTitle);
 			this.Font = new System.Drawing.Font("Bahnschrift Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -74,6 +156,7 @@
 			this.MaximizeBox = false;
 			this.Name = "Main";
 			this.Load += new System.EventHandler(this.Main_Load);
+			this.groupTODO.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -83,6 +166,12 @@
 
 		private System.Windows.Forms.Label lblTitle;
 		private System.Windows.Forms.GroupBox groupTODO;
+		private System.Windows.Forms.ListBox listBox1;
+		private System.Windows.Forms.RadioButton radioButton1;
+		private System.Windows.Forms.RadioButton radioButton2;
+		private System.Windows.Forms.RadioButton radioButton3;
+		private System.Windows.Forms.Button btnProjects;
+		private System.Windows.Forms.Button button1;
 	}
 }
 

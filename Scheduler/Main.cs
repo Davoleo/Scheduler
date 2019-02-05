@@ -32,5 +32,17 @@ namespace Scheduler
 			GroupBox box = (GroupBox) sender;
 			Utils.DrawGroupBox(box, e.Graphics, Color.FromArgb(0, 170, 85), Color.FromArgb(0, 170, 85), Color.Black);
 		}
+
+		private void btnProjects_Click(object sender, EventArgs e)
+		{
+			Projects projectForm = new Projects();
+			projectForm.Show();
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			Settings setttingsForm = new Settings();
+			setttingsForm.ShowDialog();
+		}
 	}
 }
