@@ -31,7 +31,7 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
 			this.lblTitle = new System.Windows.Forms.Label();
 			this.groupTODO = new System.Windows.Forms.GroupBox();
-			this.listBox1 = new System.Windows.Forms.ListBox();
+			this.TODOlist = new System.Windows.Forms.ListBox();
 			this.radioButton1 = new System.Windows.Forms.RadioButton();
 			this.radioButton2 = new System.Windows.Forms.RadioButton();
 			this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -54,30 +54,30 @@
 			// groupTODO
 			// 
 			this.groupTODO.BackColor = System.Drawing.Color.Transparent;
-			this.groupTODO.Controls.Add(this.listBox1);
+			this.groupTODO.Controls.Add(this.TODOlist);
 			this.groupTODO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.groupTODO.Font = new System.Drawing.Font("Bahnschrift Condensed", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.groupTODO.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(85)))));
 			this.groupTODO.Location = new System.Drawing.Point(17, 57);
 			this.groupTODO.Name = "groupTODO";
-			this.groupTODO.Size = new System.Drawing.Size(269, 208);
+			this.groupTODO.Size = new System.Drawing.Size(269, 162);
 			this.groupTODO.TabIndex = 1;
 			this.groupTODO.TabStop = false;
 			this.groupTODO.Text = "TODO";
 			this.groupTODO.Paint += new System.Windows.Forms.PaintEventHandler(this.groupTODO_Paint);
 			// 
-			// listBox1
+			// TODOlist
 			// 
-			this.listBox1.BackColor = System.Drawing.Color.Black;
-			this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.listBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(85)))));
-			this.listBox1.FormattingEnabled = true;
-			this.listBox1.ItemHeight = 16;
-			this.listBox1.Location = new System.Drawing.Point(3, 20);
-			this.listBox1.Name = "listBox1";
-			this.listBox1.Size = new System.Drawing.Size(263, 185);
-			this.listBox1.TabIndex = 0;
+			this.TODOlist.BackColor = System.Drawing.Color.Black;
+			this.TODOlist.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.TODOlist.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.TODOlist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(85)))));
+			this.TODOlist.FormattingEnabled = true;
+			this.TODOlist.ItemHeight = 16;
+			this.TODOlist.Location = new System.Drawing.Point(3, 20);
+			this.TODOlist.Name = "TODOlist";
+			this.TODOlist.Size = new System.Drawing.Size(263, 139);
+			this.TODOlist.TabIndex = 0;
 			// 
 			// radioButton1
 			// 
@@ -166,7 +166,7 @@
 
 		private System.Windows.Forms.Label lblTitle;
 		private System.Windows.Forms.GroupBox groupTODO;
-		private System.Windows.Forms.ListBox listBox1;
+		private System.Windows.Forms.ListBox TODOlist;
 		private System.Windows.Forms.RadioButton radioButton1;
 		private System.Windows.Forms.RadioButton radioButton2;
 		private System.Windows.Forms.RadioButton radioButton3;

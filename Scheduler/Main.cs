@@ -21,16 +21,23 @@ namespace Scheduler
 			InitializeComponent();
 		}
 
+		public static Color greenTheme = Color.FromArgb(0, 170, 85);
+		public static Color yellowTheme = Color.FromArgb(189, 0, 0);
+		public static Color redTheme = Color.FromArgb(255, 230, 0);
+
+
 		private void Main_Load(object sender, EventArgs e)
 		{
 			groupTODO.Paint += groupTODO_Paint;
+			
+
 			//Environment
 		}
 
 		private void groupTODO_Paint(object sender, PaintEventArgs e)
 		{
 			GroupBox box = (GroupBox) sender;
-			Utils.DrawGroupBox(box, e.Graphics, Color.FromArgb(0, 170, 85), Color.FromArgb(0, 170, 85), Color.Black);
+			Utils.DrawGroupBox(box, e.Graphics, greenTheme, greenTheme, Color.Black);
 		}
 
 		private void btnProjects_Click(object sender, EventArgs e)

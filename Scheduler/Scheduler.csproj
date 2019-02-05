@@ -108,6 +108,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
@@ -126,6 +127,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\GreenIcon.ico" />
+    <None Include="Resources\schedule_green.ico" />
+    <None Include="Resources\schedule_red.ico" />
+    <None Include="Resources\schedule_yellow.ico" />
     <Content Include="schedule_green.ico" />
   </ItemGroup>
   <ItemGroup>
