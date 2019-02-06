@@ -17,44 +17,50 @@ namespace Scheduler
 			InitializeComponent();
 		}
 
-		private String projectName;
-		private String status;
-		private String type;
-		private bool TODO;
+		public string ProjectName { get; private set; }
+		public string Status { get; private set; }
+		public string Type { get; private set; }
+		public bool Todo { get; private set; }
 
 		private void btnCancel_Click(object sender, EventArgs e)
 		{
+			ProjectName = null;
+			Status = null;
+			Type = null;
+			Projects.acceptData = false;
 			Close();
 		}
 
 		private void btnOK_Click(object sender, EventArgs e)
 		{
-			
+			Projects.acceptData = true;
+			Hide();
 		}
 
 		private void Entry_Load(object sender, EventArgs e)
 		{
 			comboStatus.Items.AddRange(Projects.statuses);
+			txbName.Focus();
 		}
 
 		private void txbName_Validated(object sender, EventArgs e)
 		{
-			projectName = txbName.Text;
+			ProjectName = txbName.Text;
 		}
 
 		private void comboStatus_Validated(object sender, EventArgs e)
 		{
-			status = comboStatus.Text;
+			Status = comboStatus.Text;
 		}
 
 		private void txbType_Validated(object sender, EventArgs e)
 		{
-			type = txbType.Text;
+			Type = txbType.Text;
 		}
 
 		private void radioTODOFalse_CheckedChanged(object sender, EventArgs e)
 		{
-			TODO = radioTODOTrue.Checked;
+			Todo = radioTODOTrue.Checked;
 		}
 
 		private void txbName_Validating(object sender, CancelEventArgs e)
@@ -99,5 +105,9 @@ namespace Scheduler
 				txbType.ForeColor = Color.Green;
 			}
 		}
+
+
+
+		
 	}
 }

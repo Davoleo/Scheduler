@@ -74,6 +74,10 @@
 			this.TODOlist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(85)))));
 			this.TODOlist.FormattingEnabled = true;
 			this.TODOlist.ItemHeight = 16;
+			this.TODOlist.Items.AddRange(new object[] {
+            "ciao",
+            "ciao",
+            "ciao"});
 			this.TODOlist.Location = new System.Drawing.Point(3, 20);
 			this.TODOlist.Name = "TODOlist";
 			this.TODOlist.Size = new System.Drawing.Size(263, 139);

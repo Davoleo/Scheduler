@@ -32,18 +32,18 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.editìToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.label5 = new System.Windows.Forms.Label();
-			this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.addEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.removeEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.projectList = new System.Windows.Forms.ListBox();
 			this.statusList = new System.Windows.Forms.ListBox();
 			this.typeList = new System.Windows.Forms.ListBox();
 			this.todoList = new System.Windows.Forms.ListBox();
+			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.editìToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.addEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.removeEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
@@ -107,6 +107,66 @@
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Project";
 			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label5.Location = new System.Drawing.Point(408, 1);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(44, 17);
+			this.label5.TabIndex = 4;
+			this.label5.Text = "Type";
+			// 
+			// projectList
+			// 
+			this.projectList.BackColor = System.Drawing.Color.Black;
+			this.projectList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.projectList.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.projectList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(85)))));
+			this.projectList.FormattingEnabled = true;
+			this.projectList.Location = new System.Drawing.Point(4, 25);
+			this.projectList.Name = "projectList";
+			this.projectList.Size = new System.Drawing.Size(195, 316);
+			this.projectList.TabIndex = 5;
+			this.projectList.SelectedIndexChanged += new System.EventHandler(this.projectList_SelectedIndexChanged);
+			// 
+			// statusList
+			// 
+			this.statusList.BackColor = System.Drawing.Color.Black;
+			this.statusList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.statusList.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.statusList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(85)))));
+			this.statusList.FormattingEnabled = true;
+			this.statusList.Location = new System.Drawing.Point(206, 25);
+			this.statusList.Name = "statusList";
+			this.statusList.Size = new System.Drawing.Size(195, 316);
+			this.statusList.TabIndex = 6;
+			this.statusList.SelectedIndexChanged += new System.EventHandler(this.statusList_SelectedIndexChanged);
+			// 
+			// typeList
+			// 
+			this.typeList.BackColor = System.Drawing.Color.Black;
+			this.typeList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.typeList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(85)))));
+			this.typeList.FormattingEnabled = true;
+			this.typeList.Location = new System.Drawing.Point(408, 25);
+			this.typeList.Name = "typeList";
+			this.typeList.Size = new System.Drawing.Size(195, 312);
+			this.typeList.TabIndex = 7;
+			this.typeList.SelectedIndexChanged += new System.EventHandler(this.typeList_SelectedIndexChanged);
+			// 
+			// todoList
+			// 
+			this.todoList.BackColor = System.Drawing.Color.Black;
+			this.todoList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.todoList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(85)))));
+			this.todoList.FormattingEnabled = true;
+			this.todoList.Location = new System.Drawing.Point(610, 25);
+			this.todoList.Name = "todoList";
+			this.todoList.Size = new System.Drawing.Size(195, 312);
+			this.todoList.TabIndex = 8;
+			this.todoList.SelectedIndexChanged += new System.EventHandler(this.todoList_SelectedIndexChanged);
+			// 
 			// menuStrip1
 			// 
 			this.menuStrip1.BackColor = System.Drawing.Color.Black;
@@ -129,6 +189,18 @@
 			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
 			this.fileToolStripMenuItem.Text = "File";
 			// 
+			// saveToolStripMenuItem
+			// 
+			this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+			this.saveToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+			this.saveToolStripMenuItem.Text = "Save";
+			// 
+			// openToolStripMenuItem
+			// 
+			this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+			this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+			this.openToolStripMenuItem.Text = "Open";
+			// 
 			// editìToolStripMenuItem
 			// 
 			this.editìToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -139,32 +211,10 @@
 			this.editìToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
 			this.editìToolStripMenuItem.Text = "Edit";
 			// 
-			// label5
-			// 
-			this.label5.AutoSize = true;
-			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(408, 1);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(44, 17);
-			this.label5.TabIndex = 4;
-			this.label5.Text = "Type";
-			// 
-			// saveToolStripMenuItem
-			// 
-			this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-			this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.saveToolStripMenuItem.Text = "Save";
-			// 
-			// openToolStripMenuItem
-			// 
-			this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-			this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.openToolStripMenuItem.Text = "Open";
-			// 
 			// addEntryToolStripMenuItem
 			// 
 			this.addEntryToolStripMenuItem.Name = "addEntryToolStripMenuItem";
-			this.addEntryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.addEntryToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
 			this.addEntryToolStripMenuItem.Text = "Add Entry";
 			this.addEntryToolStripMenuItem.ToolTipText = "Add a new project entry after the selected entry";
 			this.addEntryToolStripMenuItem.Click += new System.EventHandler(this.addEntryToolStripMenuItem_Click);
@@ -175,52 +225,7 @@
 			this.removeEntryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.removeEntryToolStripMenuItem.Text = "Remove Entry";
 			this.removeEntryToolStripMenuItem.ToolTipText = "Remove the selected project";
-			// 
-			// projectList
-			// 
-			this.projectList.BackColor = System.Drawing.Color.Black;
-			this.projectList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.projectList.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.projectList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(85)))));
-			this.projectList.FormattingEnabled = true;
-			this.projectList.Location = new System.Drawing.Point(4, 25);
-			this.projectList.Name = "projectList";
-			this.projectList.Size = new System.Drawing.Size(195, 316);
-			this.projectList.TabIndex = 5;
-			// 
-			// statusList
-			// 
-			this.statusList.BackColor = System.Drawing.Color.Black;
-			this.statusList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.statusList.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.statusList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(85)))));
-			this.statusList.FormattingEnabled = true;
-			this.statusList.Location = new System.Drawing.Point(206, 25);
-			this.statusList.Name = "statusList";
-			this.statusList.Size = new System.Drawing.Size(195, 316);
-			this.statusList.TabIndex = 6;
-			// 
-			// typeList
-			// 
-			this.typeList.BackColor = System.Drawing.Color.Black;
-			this.typeList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.typeList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(85)))));
-			this.typeList.FormattingEnabled = true;
-			this.typeList.Location = new System.Drawing.Point(408, 25);
-			this.typeList.Name = "typeList";
-			this.typeList.Size = new System.Drawing.Size(195, 312);
-			this.typeList.TabIndex = 7;
-			// 
-			// todoList
-			// 
-			this.todoList.BackColor = System.Drawing.Color.Black;
-			this.todoList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.todoList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(85)))));
-			this.todoList.FormattingEnabled = true;
-			this.todoList.Location = new System.Drawing.Point(610, 25);
-			this.todoList.Name = "todoList";
-			this.todoList.Size = new System.Drawing.Size(195, 312);
-			this.todoList.TabIndex = 8;
+			this.removeEntryToolStripMenuItem.Click += new System.EventHandler(this.removeEntryToolStripMenuItem_Click);
 			// 
 			// Projects
 			// 
@@ -233,7 +238,10 @@
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "Projects";
+			this.ShowIcon = false;
 			this.Text = "Projects";
+			this.Activated += new System.EventHandler(this.Projects_Activated);
+			this.Load += new System.EventHandler(this.Projects_Load);
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.tableLayoutPanel1.PerformLayout();
 			this.menuStrip1.ResumeLayout(false);
