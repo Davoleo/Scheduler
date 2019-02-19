@@ -32,7 +32,7 @@ namespace Scheduler
 			formEntry.ShowDialog();
 		}
 
-		public void setTheme(Color color)
+		public void SetTheme(Color color)
 		{
 			tableLayoutPanel1.ForeColor = color;
 			projectList.ForeColor = color;
@@ -49,7 +49,7 @@ namespace Scheduler
 		private void Projects_Load(object sender, EventArgs e)
 		{
 			mainForm = (Main) Application.OpenForms[0];
-			setTheme(mainForm.getActiveTheme());
+			SetTheme(mainForm.getActiveTheme());
 		}
 
 		private void Projects_Activated(object sender, EventArgs e)
