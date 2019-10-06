@@ -90,6 +90,8 @@
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
+    <Compile Include="utils\EnumStatus.cs" />
+    <Compile Include="utils\Task.cs" />
     <Compile Include="utils\Utils.cs" />
     <EmbeddedResource Include="Entry.resx">
       <DependentUpon>Entry.cs</DependentUpon>
