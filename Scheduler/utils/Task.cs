@@ -1,26 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Scheduler.utils
+﻿namespace Scheduler.Utils
 {
     class Task
     {
         public int ID { get; set; }
         public string ProjectName { get; set; }
         public EnumStatus Status { get; set; }
-        public string Type { get; set; }
-        public bool TODO { get; set; }
+        public string Info { get; set; }
 
-        public Task(int id, string name, EnumStatus status, string type, bool todo)
+        public Task(int id, string name, EnumStatus status, string info)
         {
             ID = id;
             ProjectName = name;
             Status = status;
-            Type = type;
-            TODO = todo;
+            Info = info;
         }
 
     }

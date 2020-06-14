@@ -27,19 +27,17 @@ namespace Scheduler
 			ProjectName = null;
 			Status = null;
 			Type = null;
-			Projects.acceptData = false;
-			Close();
+            Close();
 		}
 
 		private void btnOK_Click(object sender, EventArgs e)
 		{
-			Projects.acceptData = true;
-			Hide();
+            Hide();
 		}
 
 		private void Entry_Load(object sender, EventArgs e)
 		{
-			comboStatus.Items.AddRange(Projects.statuses);
+			comboStatus.Items.AddRange(ProjectsForm.statuses);
 			txbName.Focus();
 		}
 
@@ -105,9 +103,5 @@ namespace Scheduler
 				txbType.ForeColor = Color.Green;
 			}
 		}
-
-
-
-		
-	}
+    }
 }

@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Runtime.Remoting;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Scheduler.Properties;
-using Scheduler.utils;
+using Scheduler.Utils;
 
 namespace Scheduler
 {
@@ -20,7 +12,8 @@ namespace Scheduler
 		public Main()
 		{
 			InitializeComponent();
-		}
+            DatabaseHelper.TestConnection();
+        }
 
 		public static Color greenTheme = Color.FromArgb(0, 170, 85);
 		public static Color redTheme = Color.FromArgb(189, 0, 0);
@@ -33,46 +26,46 @@ namespace Scheduler
 		{
 			groupTODO.Paint += groupTODO_Paint;
 
-			switch (TODOlist.Items.Count)
-			{
-				case 0:
-					setTheme(greenTheme);
-					break;
-				case 1:
-					setTheme(greenTheme);
-					break;
-				case 2:
-					setTheme(greenTheme);
-					break;
-				case 3:
-					setTheme(yellowTheme);
-					break;
-				case 4:
-					setTheme(redTheme);
-					break;
-				default:
-					setTheme(redTheme);
-					break;
-			}
-			//Environment
-		}
+            switch (TODOlist.Items.Count)
+            {
+                case 0:
+                    setTheme(greenTheme);
+                    break;
+                case 1:
+                    setTheme(greenTheme);
+                    break;
+                case 2:
+                    setTheme(greenTheme);
+                    break;
+                case 3:
+                    setTheme(yellowTheme);
+                    break;
+                case 4:
+                    setTheme(redTheme);
+                    break;
+                default:
+                    setTheme(redTheme);
+                    break;
+            }
+            //Environment
+        }
 
 		private void groupTODO_Paint(object sender, PaintEventArgs e)
 		{
 			GroupBox box = (GroupBox) sender;
-			Utils.DrawGroupBox(box, e.Graphics, ForeColor, ForeColor, Color.Black);
-		}
+            Utils.Utils.DrawGroupBox(box, e.Graphics, ForeColor, ForeColor, Color.Black);
+        }
 
 		private void btnProjects_Click(object sender, EventArgs e)
 		{
-			Projects projectForm = new Projects();
+			ProjectsForm projectForm = new ProjectsForm();
 			projectForm.Show();
 		}
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			Settings setttingsForm = new Settings();
-			setttingsForm.ShowDialog();
+			Settings settingsForm = new Settings();
+			settingsForm.ShowDialog();
 		}
 
 		private void setTheme(Color color)
